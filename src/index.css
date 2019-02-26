@@ -1,0 +1,349 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: cursive;
+  color: white;
+}
+
+#root {
+  background-image: url("./Styles/images/carpet.jpg");
+}
+
+.tableContainer {
+  padding-bottom: 5px;
+  background-image: radial-gradient(#41C551, #21b834, #008310);
+}
+
+.table {
+  width: 75%;
+  max-width: 600px;
+  height: 400px;
+  position: relative;
+  padding-top: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rules {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  position: absolute;
+  color: black;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  width: 400px;
+  display: none;
+}
+
+.wood {
+  background-image: url("./Styles/images/mahogany.jpg");
+  min-height: 160px;
+  position: relative;
+  border-radius: 0 0 10% 10%;
+}
+
+.buttonsContainer {
+  width: 75%;
+  max-width: 600px;
+  min-height: 60px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cardsAndScoreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carpet {
+  height: -webkit-calc(100vh - 565px);
+  height: -moz-calc(100vh - 565px);
+  height: calc(100vh - 565px);
+}
+@media only screen and (max-height: 600px) {
+  .carpet {
+    height: 150px;
+  }
+}
+
+#tooltip {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+@media only screen and (max-width: 600px) {
+  #tooltip {
+    top: 2%;
+    left: 2%;
+  }
+}
+
+.info {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .info {
+    font-size: 1.5rem;
+  }
+}
+
+#tooltipText {
+  display: inline-block;
+  position: absolute;
+  visibility: hidden;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5%;
+  text-align: center;
+  z-index: 10;
+}
+
+#tooltipText > p {
+  padding: 0 2% 0 2%;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.btnDeal {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btnDeal:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btnDeal:active {
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+.btnHit {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btnHit:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btnHit:active {
+  background-color: #1e7e34;
+  border-color: #1c7430;
+}
+
+.btnStand {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btnStand:hover {
+  color: #fff;
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.btnStand:active {
+  background-color: #bd2130;
+  border-color: #b21f2d;
+}
+
+.btnDouble {
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btnDouble:hover {
+  color: #212529;
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.btnDouble:active {
+  background-color: #d39e00;
+  border-color: #c69500;
+}
+
+.cardDiv {
+  display: inline-block;
+}
+
+.cardImageContainer {
+  position: relative;
+  width: 56px;
+  height: 80px;
+}
+
+.cardImage {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 9%;
+  position: absolute;
+  transform: perspective(600px) rotateY(0deg);
+  transition: transform 0.5s linear 0s;
+  backface-visibility: hidden;
+}
+
+.faceDown {
+  transform: perspective(600px) rotateY(-180deg);
+  backface-visibility: hidden;
+  transition: transform 0.5s linear 0s;
+}
+
+.backOfTheCard {
+  background-image: url("./Styles/images/faceDownCard.jpg");
+}
+
+.backOfTheCardRotate {
+  transform: perspective(600px) rotateY(180deg);
+  backface-visibility: hidden;
+  transition: transform 0.5s linear 0s;
+}
+
+.score {
+  border: 1px solid #777;
+  border-radius: 50%;
+  padding: 3.5px;
+}
+
+.u21Score {
+  background-color: white;
+  color: darkblue;
+}
+
+.e21ScoreContainer {
+  box-shadow: 0px 0px 30px;
+  border-radius: 50%;
+}
+
+.e21Score {
+  background-color: #21b834;
+  color: white;
+}
+
+.o21Score {
+  color: red;
+  border-color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.chip {
+  color: #22151C;
+  display: inline-block;
+  max-width: 8%;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chipImage {
+  max-width: 100%;
+  border: 1.5px solid #9d9fa0;
+  border-radius: 50%;
+  background-color: #f1e8ed;
+  padding-left: 0.9px;
+}
+
+.chip span {
+  color: white;
+  font-size: 0.8em;
+}
+
+.chip:hover {
+  transform: scale(1.05);
+}
+
+.allPlayersChips {
+  display: flex;
+  justify-content: space-around;
+  max-width: 600px;
+  width: 70%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 600px) {
+  .allPlayersChips {
+    width: 90%;
+  }
+}
+
+.pot {
+  width: 60px;
+  margin: auto;
+  position: relative;
+  color: white;
+}
+
+.cancelBet {
+  position: absolute;
+  top: -9px;
+  right: -11px;
+  opacity: 0.65;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #ffc107;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.cancelBet:hover {
+  background-color: #e0a800;
+  opacity: 0.8;
+}
+
+.currentMoney {
+  position: absolute;
+  bottom: 8px;
+  left: 22px;
+}
+
+.endGameText {
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */

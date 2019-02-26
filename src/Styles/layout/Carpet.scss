@@ -1,0 +1,10 @@
+.carpet{    
+    height: -webkit-calc(100vh - 565px);
+    height:    -moz-calc(100vh - 565px);
+    height:         calc(100vh - 565px);
+
+    @include mediumHeight-and-below{
+        height: 150px;
+    }
+}
+

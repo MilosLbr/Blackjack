@@ -1,0 +1,33 @@
+.cardDiv{
+    display: inline-block;
+}
+
+.cardImageContainer{
+    position: relative;
+    width: 56px;
+    height: 80px;
+}
+
+.cardImage{
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 9%;
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    transition: transform 0.5s linear 0s;
+    backface-visibility: hidden;
+}
+
+.faceDown{
+    transform: perspective(600px) rotateY(-180deg);
+    backface-visibility: hidden;
+    transition: transform 0.5s linear 0s;
+}
+.backOfTheCard{
+    background-image: url('./Styles/images/faceDownCard.jpg');
+}
+.backOfTheCardRotate{
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    transition: transform 0.5s linear 0s;
+}

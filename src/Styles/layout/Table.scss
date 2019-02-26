@@ -1,0 +1,39 @@
+$green1 : #008310;
+$green2: #21b834;
+$green3: #41C551;
+
+.tableContainer{
+    padding-bottom: 5px;
+    background-image: radial-gradient($green3,$green2, $green1);
+}
+
+.table{
+    width: 75%;
+    max-width: 600px;
+    height: 400px;
+    position: relative;
+    padding-top: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rules{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    display: none;
+}
+
+.wood{
+    background-image: url('./Styles/images/mahogany.jpg');
+    min-height: 160px;
+    position: relative;
+    border-radius: 0 0 10% 10%;
+}

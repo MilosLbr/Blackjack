@@ -1,0 +1,19 @@
+/// base import
+@import './base/base.scss';
+@import './base//mediaQueries.scss';
+
+/// layout import
+@import './layout/Table.scss';
+@import './layout/ButtonsContainer.scss';
+@import './layout/CardsContainer.scss';
+@import './layout/Carpet.scss';
+
+/// module imports
+@import './modules/Tooltip.scss';
+@import './modules/Buttons.scss';
+@import './modules/Cards.scss';
+@import './modules/Score.scss';
+@import './modules/Chips.scss';
+@import './modules//Pot.scss';
+@import './modules/CurrentMoney.scss';
+@import './modules/endGameText.scss';

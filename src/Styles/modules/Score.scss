@@ -1,0 +1,25 @@
+.score{
+    border: 1px solid #777;
+    border-radius: 50%;
+    padding: 3.5px; 
+}
+
+.u21Score{
+    background-color: white;
+    color: darkblue;
+}
+.e21ScoreContainer{
+    box-shadow: 0px 0px 30px;
+    border-radius: 50%;
+}
+.e21Score{
+    background-color: #21b834;
+    color: white;
+}
+.o21Score{
+    color: red;
+    border-color: red;
+}
+.hidden{
+    display: none;
+}
